@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+
+	<!-- Dùng để loại bỏ. VD: những url có /api... thì sẽ không apply giao diện -->
+	<excludes>
+		<pattern>/api*</pattern>
+	</excludes>
+	
+	<!-- Apply giao diện admin cho url có /admin -->
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/admin*</pattern>
+	</decorator>
+	
+	<!-- Apply giao diện web cho url có /web  -->
+	<decorator name="web" page="web.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	
+	<decorator name="login" page="login.jsp">
+		<pattern>/dang-nhap</pattern>
+	</decorator>
+</decorators>
